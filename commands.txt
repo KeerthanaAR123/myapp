@@ -1,0 +1,69 @@
+student@DBMS19:~$ ls -a
+.     .azure         .bashrc  .docker     .groovy   .landscape   .nam-port                  .viminfo     l              python-app1
+..    .bash_history  .cache   .git        .java     .local       .profile                   .wget-hsts   my-python-app  snap
+.aws  .bash_logout   .config  .gitconfig  .jenkins  .motd_shown  .sudo_as_admin_successful  jenkins.war  myapp
+student@DBMS19:~$ cd myapp
+student@DBMS19:~/myapp$ ls -a
+.  ..  Dckerfile  Dockerfile  app.py  requirements.txt  static  templates
+student@DBMS19:~/myapp$ gedit app.py
+
+(gedit:1237): Tepl-WARNING **: 09:11:10.367: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+^C
+student@DBMS19:~/myapp$ git init
+Initialized empty Git repository in /home/student/myapp/.git/
+student@DBMS19:~/myapp$ git add app.py
+student@DBMS19:~/myapp$ git commit -m "Python file"
+[master (root-commit) bc65016] Python file
+ 1 file changed, 24 insertions(+)
+ create mode 100644 app.py
+student@DBMS19:~/myapp$ git remote add origin "https://github.com/KeerthanaAR123/myapp.git"
+student@DBMS19:~/myapp$ git add Dockerfile
+student@DBMS19:~/myapp$ git commit -m "Docker file"
+[master 3f73464] Docker file
+ 1 file changed, 7 insertions(+)
+ create mode 100644 Dockerfile
+student@DBMS19:~/myapp$ git remote add origin "https://github.com/KeerthanaAR123/myapp.git"
+fatal: remote origin already exists.
+student@DBMS19:~/myapp$ git push -u origin master
+Username for 'https://github.com': KeerthanaAR123
+Password for 'https://KeerthanaAR123@github.com':
+remote: Permission to KeerthanaAR123/myapp.git denied to KeerthanaAR123.
+fatal: unable to access 'https://github.com/KeerthanaAR123/myapp.git/': The requested URL returned error: 403
+student@DBMS19:~/myapp$ GIT BRANCH
+GIT: command not found
+student@DBMS19:~/myapp$ git branch
+* master
+student@DBMS19:~/myapp$ git push -u origin master
+Username for 'https://github.com': "https://github.com/KeerthanaAR123/myapp.git"
+Password for 'https://%22https%3A%2F%2Fgithub.com%2FKeerthanaAR123%2Fmyapp.git%22@github.com':
+student@DBMS19:~/myapp$ git push -u origin master
+Username for 'https://github.com': KeerthanaAR123
+Password for 'https://KeerthanaAR123@github.com':
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 984 bytes | 984.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/KeerthanaAR123/myapp.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+student@DBMS19:~/myapp$ git add requirements.txt
+student@DBMS19:~/myapp$ git commit -m "Requirements.txt"
+[master 598dc34] Requirements.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 requirements.txt
+student@DBMS19:~/myapp$ git push -u origin master
+Username for 'https://github.com': KeerthanaAR123
+Password for 'https://KeerthanaAR123@github.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/KeerthanaAR123/myapp.git
+   3f73464..598dc34  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+student@DBMS19:~/myapp$
+
